@@ -14,7 +14,9 @@ dotenv.config()
 const app = express();
 
 app.use(express.json())
-app.use(cors("*"))
+app.use(cors({
+    origin : "https://brain-wave-task-2-blog-app-front-end.vercel.app"
+}))
 
 const port = 4600 || process.env.PORT;
 
